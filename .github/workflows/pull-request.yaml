@@ -13,7 +13,7 @@ jobs:
 
     - name: Build docker image
       run: |
-        docker build -f ${{ github.workspace }}/Dockerfile -t nodejs-hello-world:${{ github.sha }}
+        docker build -f ${{ github.workspace }}/Dockerfile -t nodejs-hello-world:${{ github.sha }} .
 
     - name: Scan container image
       uses: Azure/container-scan@v0
