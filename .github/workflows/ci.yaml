@@ -5,9 +5,9 @@ on:
 
 
 env:
-  REGISTRY_NAME: anraghunCR
-  CLUSTER_NAME: demo-cluster
-  CLUSTER_RESOURCE_GROUP: anraghun
+  REGISTRY_NAME: acr30850
+  CLUSTER_NAME: cncg2020-9049
+  CLUSTER_RESOURCE_GROUP: cncg2020seoul
   NAMESPACE: demo
   
 jobs:
@@ -51,7 +51,7 @@ jobs:
         container-registry-url: ${{ env.REGISTRY_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-        secret-name: anraghuncluster-registry-connection
+        secret-name: cncgseoul2020democluster-registry-connection
         namespace: ${{ env.NAMESPACE }}
     
     # Deploy app to AKS
@@ -63,5 +63,5 @@ jobs:
         images: |
           ${{ env.REGISTRY_NAME }}.azurecr.io/nodejs-hello-world:${{ github.sha }}
         imagepullsecrets: |
-          anraghuncluster-registry-connection
+          cncgseoul2020democluster-registry-connection
         namespace: ${{ env.NAMESPACE }}

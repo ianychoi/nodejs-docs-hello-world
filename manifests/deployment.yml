@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
         - name: "hello-world"
-          image: "anraghunCR.azurecr.io/nodejs-hello-world"
+          image: "acr30850.azurecr.io/nodejs-hello-world"
           ports:
           - containerPort: 1337
