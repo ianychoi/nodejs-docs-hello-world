@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: acr30850.azurecr.io/nodejs-hello-world # IMPORTANT: update with your own repository
+        image: acr30346.azurecr.io/nodejs-hello-world # IMPORTANT: update with your own repository
         imagePullPolicy: Always
         ports:
         - containerPort: 1337 # the application listens to this port
