@@ -51,7 +51,7 @@ jobs:
         container-registry-url: ${{ env.REGISTRY_NAME }}.azurecr.io
         container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
         container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-        secret-name: cncgseoul2020democluster-registry-connection
+        secret-name: k8s-create-secret-democluster-registry-connection
         namespace: ${{ env.NAMESPACE }}
     
     # Deploy app to AKS
@@ -63,5 +63,5 @@ jobs:
         images: |
           ${{ env.REGISTRY_NAME }}.azurecr.io/nodejs-hello-world:${{ github.sha }}
         imagepullsecrets: |
-          cncgseoul2020democluster-registry-connection
+          k8s-create-secret-democluster-registry-connection
         namespace: ${{ env.NAMESPACE }}
