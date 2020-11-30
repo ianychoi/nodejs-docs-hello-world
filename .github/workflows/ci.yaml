@@ -5,7 +5,7 @@ on:
 
 
 env:
-  REGISTRY_NAME: node
+  REGISTRY_NAME: cosmosdemoacr
   CLUSTER_NAME: cosmos-demo-cluster
   CLUSTER_RESOURCE_GROUP: cosmos-demo-rg
   NAMESPACE: demo
