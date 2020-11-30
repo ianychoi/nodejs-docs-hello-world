@@ -11,24 +11,8 @@ env:
   NAMESPACE: demo
   
 jobs:
-"""        
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    
-    # Connect to Azure Container registry (ACR)
-    - uses: azure/docker-login@v1
-      with:
-        login-server: ${{ env.REGISTRY_NAME }}.azurecr.io
-        username: ${{ secrets.REGISTRY_USERNAME }} 
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-    
-    # Container build and push to a Azure Container registry (ACR)
-    - run: |
-        docker build . -t ${{ env.REGISTRY_NAME }}.azurecr.io/nodejs-hello-world:${{ github.sha }}
-        docker push ${{ env.REGISTRY_NAME }}.azurecr.io/nodejs-hello-world:${{ github.sha }}
-  """
+        
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
