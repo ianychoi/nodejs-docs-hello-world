@@ -5,9 +5,9 @@ on:
 
 
 env:
-  REGISTRY_NAME: acr30346
-  CLUSTER_NAME: demo-25179
-  CLUSTER_RESOURCE_GROUP: DevOpsSummitDemo
+  REGISTRY_NAME: node
+  CLUSTER_NAME: cosmos-demo-cluster
+  CLUSTER_RESOURCE_GROUP: cosmos-demo-rg
   NAMESPACE: demo
   
 jobs:
